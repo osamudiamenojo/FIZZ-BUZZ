@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My HTML Page</title>
+    <title>FizzBuzz numbers</title>
   </head>
   <body>
     <main>
         <h1>Welcome to my HTML Page</h1>
         {% for i in range(101)%}
         
-            <ul>{{i}}</ul>
-        
+        {% if i%3==0 and i%5==0 %}
+            <ul>{{i}} FizzBuzz</ul>
+        {% elif i%3==0 %}
+            <ul>{{i}} Fizz</ul>
+        {% elif i%5==0 %}
+            <ul>{{i}} Buzz</ul>
+        {% endif %}
         {% endfor%}
         <p>This is a sample HTML template.</p>
     </main>
